@@ -8,11 +8,8 @@ public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String make;
-    private String model;
-    private String year;
-    private String licensePlate;
-
+    private String type;
+    private String vehicleNumber;
     @ManyToOne
     @JoinColumn(name = "driver_id")
     private Driver driver;
@@ -26,38 +23,8 @@ public class Vehicle {
         this.id = id;
     }
 
-    public String getMake() {
-        return make;
-    }
 
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public String getLicensePlate() {
-        return licensePlate;
-    }
-
-    public void setLicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
-    }
-
+    
     public Driver getDriver() {
         return driver;
     }
@@ -65,4 +32,20 @@ public class Vehicle {
     public void setDriver(Driver driver) {
         this.driver = driver;
     }
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getVehicleNumber() {
+		return vehicleNumber;
+	}
+
+	public void setVehicleNumber(String vehicleNumber) {
+		this.vehicleNumber = vehicleNumber;
+	}
 }
